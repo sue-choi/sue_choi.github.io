@@ -1,0 +1,74 @@
+.friend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.friend .friend__avatar {
+  width: 50px;
+  border-radius: 38%;
+}
+
+.friend__avatar.g-avatar {
+  width: 70px;
+}
+
+.friend__avatar.m-avatar {
+  width: 60px;
+}
+/* .두 개 띄어쓰기 없이 쓰면 두 class모두 가진 element에만 적용된다는 뜻! 
+띄어쓰면 friend__avatar안에 있는 g.avatar를 의미함*/
+
+.friend .friend__column {
+  display: flex;
+  align-items: center;
+}
+
+.friend .friend__avatar {
+  margin-right: 15px;
+}
+
+.friend__content .friend__name {
+  display: block;
+  /* Going home!을 밑으로 내려줌 */
+  margin-bottom: 5px;
+}
+
+.friend__content .friend__status,
+.friend__content .friend__bottom-text,
+.friend .chat__timestamp {
+  opacity: 0.6;
+}
+
+.friend__content .friend__bottom-text {
+  font-size: 14px;
+}
+.friend__content .friend__status,
+.friend .chat__timestamp {
+  font-size: 12px;
+}
+
+.friend .friend__now-listening {
+  padding: 5px 10px;
+  border-radius: 30px;
+  border: 2px solid rgb(40, 150, 40);
+  font-size: 14px;
+}
+
+.friend__now-listening span {
+  opacity: 0.7;
+}
+
+.friend__now-listening i {
+  font-size: 12px;
+  color: rgb(40, 150, 40);
+}
+
+.friend__add-btn {
+  display: flex;
+  padding: 13px 15px;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}

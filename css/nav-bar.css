@@ -1,0 +1,62 @@
+.nav {
+  position: fixed;
+  width: 100%;
+  background-color: #fcfcfc;
+  padding: 20px 50px;
+  left: 0;
+  bottom: 0;
+  border-top: 1px solid #f7f7f7;
+}
+* {
+  box-sizing: border-box;
+}
+/* 1. *는 모든 element에 적용 된다는 뜻
+   2. 예를 들어 박스의 넓이가 320픽셀이라 하고 상하패딩 20픽셀 좌우패딩 50픽셀을 주면 
+   박스 입장에서 좌우 각각 50픽셀씩 잃게된다 따라서 그 부분에 해당하는 아이콘이나 내용들이 가려져 보이지 않게 되므로
+   "box-sizing: border-box"를 이용하면 320px에 패딩픽셀이 더해져 320+(50+50)=420픽셀로 처리하게 된다.*/
+
+.nav .nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav i {
+  font-size: 20px;
+}
+
+.nav .nav__list-link {
+  position: relative;
+}
+
+.nav .nav__badge {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  font-size: 10px;
+  color: white;
+  background-color: #dc5d46;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  /* % 올라갈수록 네모 -> 동그라미 */
+}
+
+@keyframes showNavBar {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.nav {
+  transform: translateY(80px);
+  animation: showNavBar 0.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
